@@ -1,0 +1,139 @@
+@use "./variables";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  min-width: 375px;
+}
+
+.card-rating {
+  width: 375px;
+  min-height: 400px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: variables.$color-blue;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: variables.$color-bg-blue;
+    border-radius: 50%;
+  }
+
+  &__img-submitted {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0;
+      margin-top: 1.5rem;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      border-radius: 1rem;
+      color: variables.$color-primary;
+      background-color: variables.$color-bg-blue;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 1.5rem 0 1.5rem 0;
+    color: variables.$color-white;
+  }
+
+  &__title-submitted {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 1.5rem 0 1.5rem 0;
+    color: variables.$color-white;
+  }
+
+  &__text {
+    margin: 0;
+    color: variables.$color-mediumGrey;
+    margin-bottom: 1.5rem;
+    line-height: 1.7rem;
+  }
+
+  &__text-submitted {
+    margin: 0;
+    color: variables.$color-mediumGrey;
+    margin-bottom: 1.5rem;
+    line-height: 1.7rem;
+    text-align: center;
+  }
+
+  &__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.5rem;
+      width: 3.5rem;
+      border: none;
+      background-color: variables.$color-bg-blue;
+      color: variables.$color-mediumGrey;
+      border-radius: 50%;
+    }
+
+    button:hover {
+      background-color: variables.$color-primary;
+      color: variables.$color-white;
+    }
+  }
+
+  &__button {
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 400;
+    border-radius: 2rem;
+    background-color: variables.$color-primary;
+    color: variables.$color-white;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    &:hover {
+      background-color: variables.$color-white;
+      color: variables.$color-primary;
+    }
+  }
+
+  .selected {
+    background-color: variables.$color-mediumGrey;
+    color: variables.$color-white;
+  }
+  .disabled {
+    background-color: hsl(25, 97%, 80%);
+    cursor: not-allowed;
+  }
+}
+.isActive {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 2rem;
+  }
+  .card-rating {
+    width: 100%;
+  }
+}

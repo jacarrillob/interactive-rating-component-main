@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1024px;
+  min-width: 375px;
+}
+
+.card-rating {
+  width: 375px;
+  min-height: 400px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: hsl(213, 19%, 18%);
+}
+.card-rating__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: hsl(213, 19%, 25%);
+  border-radius: 50%;
+}
+.card-rating__img-submitted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-rating__img-submitted p {
+  margin: 0;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 19%, 25%);
+}
+.card-rating__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 1.5rem 0 1.5rem 0;
+  color: hsl(0, 0%, 100%);
+}
+.card-rating__title-submitted {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 1.5rem 0 1.5rem 0;
+  color: hsl(0, 0%, 100%);
+}
+.card-rating__text {
+  margin: 0;
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+}
+.card-rating__text-submitted {
+  margin: 0;
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 1.5rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+.card-rating__options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card-rating__options button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  border: none;
+  background-color: hsl(213, 19%, 25%);
+  color: hsl(216, 12%, 54%);
+  border-radius: 50%;
+}
+.card-rating__options button:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+}
+.card-rating__button {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 400;
+  border-radius: 2rem;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+.card-rating__button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+.card-rating .selected {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+.card-rating .disabled {
+  background-color: hsl(25, 97%, 80%);
+  cursor: not-allowed;
+}
+
+.isActive {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding: 2rem;
+  }
+  .card-rating {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
